@@ -11,6 +11,10 @@ const toNumber = process.env.TO_NUMBER;
 
 const client = require('twilio')(accountSid, authToken);
 
+app.get("/", (req, res) => {
+    res.status(200).json({"message": "SMS API by David"});
+})
+
 app.get("/about", (req, res) => {
     res.status(200).json({
         "author": "Jesus David Elizondo Oliva",
